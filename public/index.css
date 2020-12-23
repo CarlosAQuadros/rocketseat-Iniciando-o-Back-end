@@ -1,0 +1,351 @@
+:root {
+    --green: #50fa7b;
+  }
+
+a {
+    color: inherit; 
+} 
+body{
+    
+    height: 90vh;
+    font-family: 'Black Ops One', cursive;
+    background-color: #282a36;
+}
+.homeHeader{
+    
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    color: gray;
+    justify-content: center;
+    align-items: center;
+   
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.homeHeader a{
+    margin: auto;
+    border-bottom: solid 2px var(--green);
+    padding:1px 5px;
+    text-decoration:none;
+    color: whitesmoke;
+}
+.homeHeader a:hover{
+    color: var(--green);
+    transition: 500ms;
+
+}
+.homeHeader{
+    border-bottom:solid #333 black;
+}
+main{
+    width: 100vw;
+    height: 100%;
+}
+.about{
+    transition: all 4s;
+    
+   
+    align-items: center;
+    margin: 0 auto;
+
+}
+/*=========cards===========*/
+
+.cards{
+    
+    height: 90vh;
+    width: 100%;
+    margin-top: 50px;
+    align-items: center;
+    justify-items: center;
+    position: absolute ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+
+.card{
+    margin-top: 100px;
+    box-shadow: 25px 25px 20px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    height:350px;
+    padding-bottom: 20px;
+    width:400px;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    padding-bottom: 160px;
+
+}
+.card:nth-child(2){
+    box-shadow:none;
+
+}
+.pulseCard{
+    animation: pulse 4s ease-out infinite
+}
+@keyframes pulse{
+    0%{
+    
+        box-shadow: 0px 0px  3em rgb(0,0,0,0.2);
+    }
+    30%{
+        
+        box-shadow: 0 0 5em rgba(66, 128, 86, 0.4)
+    }
+    70%{
+        box-shadow: 0 0 5em rgba(66, 128, 86, 0.1)
+    }
+  
+}
+
+
+
+
+/*============csecondary cards==============*/
+.card:nth-child(1),.card:nth-child(3) {
+    opacity: 0.3;  /*  */
+    margin-top: 160px;
+    transition: 500ms ease-in-out;
+}
+.card:nth-child(1) .moreAboutButton,.card:nth-child(3) .moreAboutButton{
+    background-color: rgb(171, 173, 171);
+}
+
+.card:nth-child(1) .imgContainer img,.card:nth-child(3) .imgContainer img{
+    box-shadow: none;
+    border-radius: 40px;
+    width: 350px;
+    height: 100%;
+    width: 90%;
+    position:static;
+    bottom: unset;
+}
+
+.card:nth-child(1) .imgContainer img,.card:nth-child(3) .imgContainer img, 
+.card:nth-child(1) .cardInfo,.card:nth-child(3) .cardInfo {
+    filter: blur(4px);
+}
+
+/*=========hover========*/
+.card:nth-child(1):hover,.card:nth-child(3):hover {
+    opacity: 1;  /*  */
+    margin-top: 90px;
+    transition: 500ms ease-in-out;
+}
+
+.card:nth-child(1):hover .imgContainer img,.card:nth-child(3):hover .imgContainer img, 
+.card:nth-child(1):hover .cardInfo,.card:nth-child(3):hover .cardInfo {
+    filter: blur(0px);
+    transition: 500ms;
+}
+
+/*=================*/
+
+.blinkShadow{
+    animation: blink 4s  infinite
+}
+@keyframes blink{
+    0%{
+    
+        box-shadow: 0px 0px  1em rgb(0,0,0,0.1);
+    }
+    30%{
+        
+        box-shadow: 0 0 2em rgba(66, 128, 86, 0.3)
+    }
+    70%{
+        box-shadow: 0 0 1em rgba(66, 128, 86, 0.2)
+    }
+
+}
+
+/*==========================================*/
+.imgContainer{
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+.card .imgContainer img{
+    border: 2px solid var(--green);
+    position: relative;
+    bottom: 70px;
+    border-radius: 100%;
+    width:17vw;
+}
+
+.cardTitle, .cardInfo{
+    color: rgb(235, 255, 243);
+    padding:5px 10px;
+    
+}
+.cardTitle{
+    
+    text-align: center;
+}
+.cardInfo{
+    display: grid;
+    text-align: justify;
+    grid-template-rows: 2fr 1fr;
+}
+.moreAboutButton{
+    cursor: pointer;
+    color: black;
+    padding: 10px 0px;
+    background-color: var(--green);
+    text-align: center;
+    border-radius: 20px;
+    
+}
+
+
+
+
+/*=========footer===========*/
+
+footer{
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 5vh;
+}
+.textContent{
+    transition: 700ms;
+    color: white;
+}
+
+.textContent a{
+    color: black;
+    padding:10px;
+    border-radius: 30px;
+    background-color:  var(--green);
+}
+.textContentHidden{
+    transition: 500ms;
+    opacity: 0;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+
+/*==============================modal*/
+
+.modalOverlay{
+ 
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 1%;
+    height: 1%;/*1%*/
+    position: fixed;
+    top: 50%;
+    left:50%;
+}
+.defModal{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;/*1%*/
+    position: fixed;
+    top: 0;
+    left:0;
+}
+.openModal{
+    display: initial ;
+    opacity: 1;
+    animation: unfold 2s ease-in forwards;
+}
+@keyframes unfold{
+    0% {
+        background-color:rgba(0, 0, 0, 1);
+        transform:scalex(1) ;
+      }
+      50%{
+        background-color:rgba(0, 0, 0, 0.3);
+        transform:scalex(100) scaley(0.1) ;
+      }
+      100%{
+
+        transform:scalex(100) scaley(100) ;
+        background-color:rgba(0, 0, 0, 0.7);
+      }
+}
+
+
+.modal{
+    background-color: rgba(142, 179, 151, 0.527);
+    width: 90%;
+    height: 90%;
+    opacity: 0;
+    position: absolute;
+    margin: 5vh 5vw;
+}
+.whiteModal{ 
+    transition: ease-in 1500ms;
+    opacity: 1;
+}
+
+
+
+.closeModal{
+    display: unset;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    
+}
+.closeModal span{
+    background-color: rgb(199, 60, 60);
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+/*==============================modal active===============*/
+
+.openModal{
+    display: unset;
+    opacity: 1;
+    animation: unfold 2s ease-in forwards;
+}
+@keyframes unfold{
+    0% {
+        background-color:rgba(0, 0, 0, 1);
+        transform:scalex(1) ;
+      }
+      50%{
+        background-color:rgba(0, 0, 0, 0.3);
+        transform:scalex(100) scaley(0.1) ;
+      }
+      100%{
+
+        transform:scalex(100) scaley(100) ;
+        background-color:rgba(0, 0, 0, 0.7);
+      }
+}
+
+/*========================================================================*/
+@media(max-width:768px){
+   *{
+       display: default;
+       height: unset;
+       width: unset;
+   }
+   .cards{
+       display: flex;
+       flex-direction: column;
+   }
+}

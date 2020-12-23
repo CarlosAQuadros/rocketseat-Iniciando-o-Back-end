@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Quadros DEV</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="homeHeader">
+
+        <a href="#">contato</a>
+        <a href="#">linkedin</a>
+        <a href="#">Github</a>
+
+    </header>
+    <main>
+        <section id="about" class="about">
+            <div id="cards" class="cards secondtemplate">
+
+
+
+
+
+
+                <div class="card ">
+                    <div class="imgContainer">
+                        <img src="./assets/certificados.jpg" alt="Foto de Carlos Quadros">
+                    </div>
+                    <div class="cardTitle">
+                        <h2 class="">Conhecimentos</h2>
+                    </div>
+                    <div class="cardInfo">
+                        <p>Atualmente focado em Javascript, nodejs e react. Aqui estao alguns certificados.</p>
+                        <p class="moreAboutButton">Certificados</p>
+                    </div>
+                </div>
+
+
+
+                <div class="card pulseCard">
+                    <div class="imgContainer">
+                        <img class="blinkShadow" src="./assets/Foto.jpg" alt="Foto de Carlos Quadros">
+                    </div>
+                    <div class="cardTitle">
+                        <h2>Carlos Quadros </h2>
+                    </div>
+                    <div class="cardInfo">
+                        <p>estudante de Analise e Desenvolvimento de Sistemas, focado desenvolvimento Javascript e seus
+                            frameworks,</p>
+                        <a class="moreAboutButton" onclick="openModal()">Mais sobre</a>
+                    </div>
+                </div>
+
+
+                <div class="card ">
+                    <div class="imgContainer">
+                        <img src="./assets/projetos.jpg" alt="Foto de Carlos Quadros">
+                    </div>
+                    <div class="cardTitle">
+                        <h2 class="">Portfólio</h2>
+                    </div>
+                    <div class="cardInfo">
+                        <p>Projetos realizados como forma de treinamento e em cursos</p>
+                        <p onclick="openModal()" class="moreAboutButton">Portfólio</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+
+    <footer>
+
+    </footer>
+    <div id="modalOverlay" class="modalOverlay">
+        <div  class="modal">
+            <div class="modalContent">
+                <h1>teste</h1>
+                <p>teste de modal</p>
+
+
+            </div>
+            <a class="closeModal">
+                <span onclick="closeModal()" class="material-icons">
+                    close
+                </span></a>
+        </div>
+
+
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
